@@ -20,6 +20,7 @@
 		AB4A881C2A6F990B00F95E3B /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A881B2A6F990B00F95E3B /* ResortDetailsView.swift */; };
 		AB4A881E2A727B5900F95E3B /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A881D2A727B5900F95E3B /* Facility.swift */; };
 		AB4A88202A78095E00F95E3B /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A881F2A78095E00F95E3B /* Favorites.swift */; };
+		AB4A88222A7A167400F95E3B /* FileManager-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A88212A7A167400F95E3B /* FileManager-Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		AB4A881B2A6F990B00F95E3B /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
 		AB4A881D2A727B5900F95E3B /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 		AB4A881F2A78095E00F95E3B /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		AB4A88212A7A167400F95E3B /* FileManager-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				AB4A88192A6F976E00F95E3B /* SkiDetailsView.swift */,
 				AB4A881B2A6F990B00F95E3B /* ResortDetailsView.swift */,
 				AB4A881F2A78095E00F95E3B /* Favorites.swift */,
+				AB4A88212A7A167400F95E3B /* FileManager-Extensions.swift */,
 				AB4A880F2A69042000F95E3B /* resorts.json */,
 				AB4A88052A67A87A00F95E3B /* Assets.xcassets */,
 				AB4A88072A67A87A00F95E3B /* Preview Content */,
@@ -167,6 +170,7 @@
 			files = (
 				AB4A88162A6ED0A200F95E3B /* WelcomeView.swift in Sources */,
 				AB4A881A2A6F976E00F95E3B /* SkiDetailsView.swift in Sources */,
+				AB4A88222A7A167400F95E3B /* FileManager-Extensions.swift in Sources */,
 				AB4A881C2A6F990B00F95E3B /* ResortDetailsView.swift in Sources */,
 				AB4A88202A78095E00F95E3B /* Favorites.swift in Sources */,
 				AB4A881E2A727B5900F95E3B /* Facility.swift in Sources */,

@@ -23,10 +23,11 @@ struct ContentView: View {
     
     @StateObject var favorites = Favorites()
     @State private var searchText = ""
+    @State private var selectedOrder = SearchType.initial
     
     var body: some View {
         NavigationView {
-            List(filteredResorts) { resort in
+            List(orderedResorts) { resort in
                 NavigationLink {
                     ResortView(resort: resort)
                 } label: {
@@ -58,7 +59,19 @@ struct ContentView: View {
                     }
                 }
             }
+            .listStyle(.insetGrouped)
             .navigationTitle("Resorts")
+            .toolbar {
+                ToolbarItem {
+                    HStack {
+                        Picker("Sort", selection: $selectedOrder) {
+                            Text("Regular").tag(SearchType.initial)
+                            Text("Alphabetical").tag(SearchType.alphabetical)
+                            Text("By country").tag(SearchType.country)
+                        }
+                    }
+                }
+            }
             .searchable(text: $searchText, prompt: "Search for resort")
             
             WelcomeView()
@@ -73,6 +86,21 @@ struct ContentView: View {
         } else {
             return resorts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
+    }
+    
+    var orderedResorts: [Resort] {
+        switch selectedOrder {
+        case .initial:
+            return filteredResorts
+        case .alphabetical:
+            return filteredResorts.sorted { $0.name < $1.name}
+        case .country:
+            return filteredResorts.sorted {$0.country < $1.country }
+        }
+    }
+    
+    enum SearchType {
+        case initial, alphabetical, country
     }
 }
 

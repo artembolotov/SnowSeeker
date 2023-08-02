@@ -24,6 +24,20 @@ struct ResortView: View {
                 Image(decorative: resort.id)
                     .resizable()
                     .scaledToFit()
+                    .overlay {
+                        ZStack(alignment: .bottomTrailing) {
+                            LinearGradient(stops: [
+                                Gradient.Stop(color: .clear, location: 0.7),
+                                Gradient.Stop(color: .black.opacity(0.3), location: 0.9)
+                            ], startPoint: .top, endPoint: .bottom)
+                            
+                            Text(resort.imageCredit)
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.8))
+                                .padding(4)
+                                .padding(.trailing, 4)
+                        }
+                    }
                 
                 HStack {
                     if sizeClass == .compact && typeSize > .large {
